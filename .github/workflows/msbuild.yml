@@ -49,9 +49,7 @@ jobs:
       run: |
         cd ${{env.SOLUTION_FILE_PATH}}
         ls
-        ls ${{env.NAME_BATGADGET}}
-        ls ${{env.NAME_BATGADGET}}/${{env.NAME_BATGADGET}}
-        Compress-Archive -Path ${{env.NAME_BATGADGET}}/${{env.NAME_BATGADGET}}/compiled/${{env.NAME_BATGADGET}}.exe -DestinationPath ${{ env.NAME_BATGADGET }}.zip
+        Compress-Archive -Path compiled/${{env.NAME_BATGADGET}}.exe -DestinationPath ${{ env.NAME_BATGADGET }}.zip
 
     - name: Create Release
       id: create_release
